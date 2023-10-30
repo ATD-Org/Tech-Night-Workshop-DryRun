@@ -60,7 +60,7 @@ jobs:
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: #TODO: Add .NET Core version
+          dotnet-version: ${{ env.DOTNET_VERSION }}
 
       # TODO: Add Action to Build Web App
       - name: Build Web App
