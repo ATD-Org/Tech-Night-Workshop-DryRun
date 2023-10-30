@@ -161,19 +161,19 @@ jobs:
 ##############################
 # PRODUCTION STAGE (FOR LATER)
 ##############################
-#  prd:
+  prd:
       # without the below if statement the job will be displayed as "failed" if a change 
       # isn't coming from the develop or main branch
-#      if: github.ref == 'refs/heads/main' 
-#      needs: [build, dev]
-#      uses: ./.github/workflows/webapp-deploy-template.yml
-#      permissions:
-#          contents: none
-#      with:
-#        ENVIRONMENT_PREFIX: PRD
-#        ENVIRONMENT: PRODUCTION
-#        AZURE_WEBAPP_NAME: ${{ needs.build.outputs.AZURE_WEBAPP_NAME }}
-#        RESOURCE_GROUP: ${{ needs.build.outputs.RESOURCE_GROUP }}
-#        STARTUP_COMMAND: "dotnet WebAPI.dll"
-#        AZURE_WEBAPP_SKU: B1
-#      secrets: inherit
+      if: github.ref == 'refs/heads/main' 
+      needs: [build, dev]
+      uses: ./.github/workflows/webapp-deploy-template.yml
+      permissions:
+          contents: none
+      with:
+        ENVIRONMENT_PREFIX: PRD
+        ENVIRONMENT: PRODUCTION
+        AZURE_WEBAPP_NAME: ${{ needs.build.outputs.AZURE_WEBAPP_NAME }}
+        RESOURCE_GROUP: ${{ needs.build.outputs.RESOURCE_GROUP }}
+        STARTUP_COMMAND: "dotnet WebAPI.dll"
+        AZURE_WEBAPP_SKU: B1
+      secrets: inherit
