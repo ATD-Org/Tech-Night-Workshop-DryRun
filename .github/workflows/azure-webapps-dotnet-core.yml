@@ -135,6 +135,7 @@ jobs:
           parameters: >
             envPrefix=${{ env.ENVIRONMENT_PREFIX }}
             webAppName=${{ needs.build.outputs.AZURE_WEBAPP_NAME }}
+            sku="B1"
           failOnStdErr: false
 
       #TODO: Add action to deploy the Web App Artifacts (azure/webapps-deploy@v2)
