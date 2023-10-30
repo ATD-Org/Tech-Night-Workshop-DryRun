@@ -75,9 +75,7 @@ jobs:
         if: always()
         with:
           files: |
-            ${{ env.WEBAPP_BASE_PATH }}/**/*.xml
             ${{ env.WEBAPP_BASE_PATH }}/**/*.trx
-            ${{ env.WEBAPP_BASE_PATH }}/**/*.json
 
       # TODO: Add Action to Publish Web App 
       - name: Publish Web App
