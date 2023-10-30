@@ -106,9 +106,9 @@ jobs:
     needs: build
     environment: "DEVELOPMENT"
 
-    # TODO: declare environment variables for the dev environment prefix
+    # TODO: declare environment variables for the dev environment prefix 
     env:
-      ENVIRONMENT_PREFIX: dev
+      ENVIRONMENT_PREFIX: DEV
 
     steps:
 
