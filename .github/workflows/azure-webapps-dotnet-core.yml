@@ -140,7 +140,7 @@ jobs:
 
       #TODO: Add action to deploy the Web App Artifacts (azure/webapps-deploy@v2)
       - name: 'Deploy Web App'
-        uses: azure/webapps-deploy@v2
+        uses: azure/webapps-deploy@v3
         with: 
           app-name: ${{ env.ENVIRONMENT_PREFIX }}-${{ needs.build.outputs.AZURE_WEBAPP_NAME }}
           package: ${{steps.download.outputs.download-path}}
