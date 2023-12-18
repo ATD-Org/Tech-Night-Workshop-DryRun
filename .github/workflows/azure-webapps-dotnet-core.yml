@@ -83,14 +83,14 @@ jobs:
 
       # TODO: Add Action to Upload Web App Artifacts for Deployment
       - name: Upload Web App Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: artifacts
           path: ${{ env.DOTNET_ROOT }}/technight-webapi
 
       # TODO: Add Action to Upload Bicep Template for Deployment
       - name: Upload Bicep Template
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: artifacts
           path: arm-templates/webapp/azuredeploy.bicep
